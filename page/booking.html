@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>appointment</title>
+        <link rel="stylesheet" href="../styles(css)/appointment.css">
+        <script src="../javascript/appointment.js"></script>
+        <script src="https://kit.fontawesome.com/33f6f1101d.js" crossorigin="anonymous"></script>
+    </head>
+    <form action="../php/appointment.php" method="post" onsubmit="send()">
+    <body>
+        <div class="cover">
+            <div>
+                <h1 id="title">Appointment</h1>
+            </div>
+                <div class="text_box">  
+                <p>Thank you for signing into the site as you can see by the title you have been sent to the booking page where an appointment can be made.</p>
+                <p>Important info to note the date is set to month day year therefore input the value accordingly to this structure.</p>
+                <p>You can also click on the icons inside the buttons for the time/date for an easier selection for each part.</p>
+                <p>First choose a date thats accessiable for you thats preferably Monday to Friday.</p>
+                <p>After a date i chosen please select a time that is reasonable and allows you to attend.</p>
+                <p>Then press book where the values will be stored and you will recieve an email shortly if done correctly.</p>
+                <p>Now you have an appointment just wait for that date and make sure to attend.</p>
+                </div>
+                    <div class="form-container">
+                    <!-- <div>
+                            <input name="students" id="student" type="text" placeholder="enter your student id">
+                        </div>
+                        <div>
+                            <input name="names" id="name" type="text" placeholder="name">
+                            <input name="lasts" id="last" type="text" placeholder="last name">
+                        </div>
+                        -->
+                        <div> 
+                            
+                            <input name="dates" id="date" type="date" max="2023-12-31" min="2023-03-22">                
+                            <input name="times" id="time" type="time">
+                        </div>
+                        <div class="button">
+                            <button id="book" type="submit">book</button>
+                        </div>
+                        <div class="button">
+                            <button id="homepage" type="button" onclick="homepage_clicked()">homepage</button>
+                        </div>
+                    </div>   
+        </div>     
+    </form>
+    </body>
+</html>

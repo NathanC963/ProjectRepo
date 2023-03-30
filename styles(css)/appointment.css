@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'poppings', sans-serif;
+    box-sizing: border-box;
+}
+
+.form-container {
+    background-color: rgb(255, 255, 255);
+    max-width: 400px;
+    margin-left: 10%;
+    padding: 50px;
+    text-align: center;
+    margin-top: 20%;
+    position: absolute;
+    border-radius: 10px;
+}
+
+#title {
+    font-size: 60px;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-style: solid;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom-width: thick;
+    border-bottom-color: rgb(0, 0, 0);
+    max-width: fit-content;
+}
+
+.cover {
+    background-image: url(../assets/booking.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.text_box {
+    background-color: aliceblue;
+    width: 40%;
+    max-width: 450px;
+    height: 90%;
+    max-height: 450px;
+    border-style: solid;
+    left: 50%;
+    top: 10%;
+    position: absolute;
+    border-radius: 8px;
+}
+
+.text_box p{
+    padding: 12px;
+}
+
+#homepage {
+    margin-top: 40px;
+    background-color: #dcae96;
+    outline: 0;
+    border-style: solid;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#book {
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+#date{
+    cursor: pointer;
+}
+
+#time{
+    cursor: pointer;
+}
+

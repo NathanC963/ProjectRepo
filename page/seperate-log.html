@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>log in</title>
+        <link rel="stylesheet" href="../styles(css)/share-auth.css">
+        <script src="../javascript/seperate-log.js"></script>
+        <script src="https://kit.fontawesome.com/33f6f1101d.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="form-box">
+                <h1 id="title">log in</h1>
+                <form method="post" action="../php/log.php" onsubmit="return hash_password()">
+                    <div class="input-group">
+                        <div class="input-field">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input name="emails" type="email" placeholder="enter your email">
+                        </div>
+        
+                        <div class="input-field">
+                            <i class="fa-solid fa-key"></i>
+                            <input name="passwords" type="password" placeholder="enter your password">
+                        </div>
+                    </div>
+                    <div class="btn-field">
+                        <button type="button" onclick="register_clicked()">register now</button>
+                        <button type="submit">log in</button>
+                    </div>
+                    <div>
+                        <button type="button" onclick="homepage_clicked()" id="return"> homepage </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
