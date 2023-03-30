@@ -1,10 +1,15 @@
 <?php
 session_start();
 
+use Dotenv\Dotenv;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 require "../vendor/autoload.php";
+
+
+$dotenv = Dotenv::createImmutable('..'); 
+$dotenv->load();
 
 $student_userid  = $_SESSION['student_userid'];
 $student_email = $_SESSION['student_email'];
@@ -27,8 +32,6 @@ $subject = "appointment";
 $msg = "you have booked your appointment successfully";
 $headers = array(
     'X-Mailer' => 'PHP/' . phpversion(),
-    'From' => "nathan@tylerw.co.uk",
-    "ctladdr" => "nathan@tylerw.co.uk"
 );
 
     
@@ -47,12 +50,12 @@ $headers = array(
         try {
             $mail->SMTPDebug = SMTP::DEBUG_SERVER;
             $mail->isSMTP();
-            $mail->Host = 'smtp.gmail.com';
+            $mail->Host = $_ENV['SMTP_HOST'];
             $mail->SMTPAuth = true;
-            $mail->Username = 'nathanwork1233@gmail.com';
-            $mail->Password = 'NathanLclarke1';
+            $mail->Username = $_ENV['SMTP_USERNAME'];
+            $mail->Password = $_ENV['SMTP_PASSWORD'];
 
-            $mail->setFrom("nathanwork1233@gmail.com");
+            $mail->setFrom($_ENV['SMTP_FROM']);
             $mail->addAddress($student_email);
             $mail->isHTML(false);
             $mail->Subject = $subject;
@@ -60,8 +63,7 @@ $headers = array(
 
             $mail->send();
 
-            // set up smtp in gmail:
-            // enable 2fa and get app password for authentication
+            
 
             echo 'you booked your appointment successfully';
         } catch (Exception $e) {
