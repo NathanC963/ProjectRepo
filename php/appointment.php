@@ -29,7 +29,7 @@ if (isset($_POST['dates']) && isset($_POST['times'])) {
     } 
 }
 $subject = "appointment";
-$msg = "you have booked your appointment successfully";
+$msg = "you have booked your appointment successfully at $times on $dates";
 $headers = array(
     'X-Mailer' => 'PHP/' . phpversion(),
 );
